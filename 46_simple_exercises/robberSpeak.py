@@ -11,7 +11,7 @@ def isVowel(char):
 def robberSpeak(string):
     newStr = ""
     for i in range(0, len(string)):
-        if(isVowel(string[i]) != True and string[i] != " "):
+        if(not isVowel(string[i]) and string[i] != " "):
             newStr += string[i] + 'o' + string[i]
         else:
             newStr += string[i]
