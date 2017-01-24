@@ -2,11 +2,7 @@
 import sys
 
 # get the num of disks as argument
-count = 0;
-for arg in sys.argv:
-    if count == 0:
-        count += 1
-        continue
+for arg in sys.argv[1::]:
     n = int(arg)
 
 #start class Hanoi
