@@ -44,14 +44,13 @@ class TkAutomaton:
         self.canvas.pack()
 
         #set up an automaton. each instance of this gui has one automaton.
-        #give it default values for now
         self.auto = cellular_automaton_1d(arraySize, numStates, numNeighbors)
         #give it a random transition state table
         self.auto.random_initialize()
 
         #counter to keep track of currRow coordinate
         self.currRow = 0
-        #one color for each state (assuming 3 states)
+        #one color for each state (up to 5)
         self.colors = ["#cccddd", "#ab1ddf", "#567aaf", "#dddfff", "bc1def"]
 
         #show first generation of cells
