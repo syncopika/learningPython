@@ -36,10 +36,7 @@ def minimal_tree(arr):
 	mid = len(arr)//2
 	newNode = TreeNode(arr[mid])
 	
-	if 0 == mid:
-		newNode.left = None 
-	else:
-		newNode.left = minimal_tree(arr[0:mid])
+	newNode.left = minimal_tree(arr[0:mid])
 	
 	if mid+1 >= len(arr):
 		newNode.right = None 
